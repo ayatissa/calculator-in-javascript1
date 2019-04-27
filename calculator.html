@@ -1,0 +1,79 @@
+<DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="..\calculator\calculator.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+  
+     
+        <table>
+         
+           <div name="cal">
+           <tr>
+            <td colspan="4"> <input  type="text"  placeholder="0" value=""  name="display"  id="dis"  readonly >
+             </td> 
+            </tr>
+            
+            <tr>
+                <td colspan="2"> <button id="buttonC"  class="colortools "  value=" " name="but1"
+                   onclick="document.getElementById('dis').value = ''"  > C </button>
+                   </td>
+ 
+                <td> 
+                  <button class="colortools " value="%" name="but3"  onclick="getNunber('%')"  > mod </button> 
+                </td>
+                <td> 
+                  <button    value="/" name="but4"  onclick="getNunber('/' )"  > / </button>
+                 </td>
+            </tr>
+            <tr>
+                    <td> <button value="7" name="but5"  onclick="getNunber('7' )"  > 7 </button> </td>
+                    <td> <button value="8" name="but6"  onclick="getNunber('8')"  > 8 </button> </td>
+                    <td> <button value="9" name="but7"  onclick="getNunber('9' )"  > 9 </button> </td>
+                    <td> <button  value="*" name="but8"  onclick=" getNunber('*')" > * </button> </td>
+           </tr>
+           <tr>
+                <td> <button value="4" name="but9"  onclick="getNunber('4')"  > 4 </button> </td>
+                <td> <button value="5" name="but10"  onclick="getNunber('5')"  > 5 </button></td>
+                <td> <button value="6" name="but11"  onclick="getNunber('6')"  > 6 </button> </td>
+                <td> <button  value="-" name="but12"  onclick="getNunber('-')"  > - </button> </td>
+            </tr>
+            <tr>
+                    <td> <button value="1" name="but13"  onclick="getNunber('1')"  > 1 </button> </td>
+                    <td> <button value="2" name="but14"  onclick="getNunber('2')"  > 2 </button> </td>
+                    <td> <button value="3" name="but15"  onclick="getNunber('3')"  > 3 </button> </td>
+                    <td> <button  name="but16"  value="+" onclick="getNunber('+' )"  > + </button> </td>
+                </tr>
+                <tr>
+                 <td colspan="2" > <button id = "buttonZero" value="0" name="but17" 
+                  onclick="getNunber('0') " > 0 </button></td>
+                 <td> <button data-action="decimal" value="."  name="but18" 
+                   onclick="getNunber('.' )"  > .</button> </td>
+                 <td > <button class ="colorOrange" data-action="calculate" value="= " name="but19"  
+        onclick=" document.getElementById('dis').value =  eval(document.getElementById('dis').value)" > = </button> 
+                </td>
+              </tr>
+           </div>
+               <script>
+              function getNunber(n)
+                { 
+                     
+                      /* var output =parseInt( document.getElementById('dis').value);
+                       output = n ;  
+*/
+                     document.getElementById('dis').value += n;
+                   
+                    display.value =n;
+                    
+                 
+                }
+               </script>
+        </table>
+</body>
+</html>
